@@ -10,14 +10,159 @@
       crossorigin="anonymous"
     />
 
-    <title>Virginia - A State for Lovers</title>
+    <title>Virginia - A State for Lovers</title>    
+    <style>
+      section {
+  width: 50%;
+  position: relative;
+  overflow: hidden; /* Ensures the pseudo-element doesn’t overflow */
+  padding: 20px; /* Add some padding for content */
+  color: white; /* Ensure text is visible on dark background */
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 37, 37, 0.6);
+  z-index: -1;
+}
+      
+      html,body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Oswald', sans-serif;
+      body{
+        background-image: url("assets/Rainy_Blue_Ridge-27527.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      }
+      .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Oswald', sans-serif;
+      }
+    .carousel-inner {
+      height: 0;
+      padding-bottom: 100%;
+    }
+    
+    .carousel-item {
+      position: absolute !important;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .carousel-indicators {
+      color: transparent;
+    }
+    .bg-secondary {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+</style>
+
   </head>
   <body>
-    <h1>Virginia</h1>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    
+    <div class = "bg-secondary">
+    <div class="d-flex justify-content-between align-items-center bg-black">
+      <div class="d-flex align-items-center">
+        <h1 class="text-white bg-black mb-0 ms-5 col fw-bold">VIRGINIA<img style="height: .8em; margin-bottom: .2em;" src="assets\heart-png-38780.png" alt=""></h1>
+         
+      </div>
+      <div class="d-inline bg-white">
+      <nav class="navbar navbar-expand-lg me-3 ms-3">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon fs-6"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Richmond</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Virginia Beach</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Norfolk</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+    </div>
+    </div>
+    <main class="main-content">
+    <section class = "col-6 me-5 bg-secondary rounded-4">
+      <h1>Welcome to the beautiful state of Virginia! </h1>
+      <p>Virginia is well known for being the "mother of presidents" as it was a birthplace to eight U.S presidents. Aside from its historical roots in the United State's history, it has a lush and beautiful scenic landscape spanning from the Blue Ridge mountains all the way to the Atlantic beaches. Virginia is one of the best states to travel to in search of hiking routes and historical sites.
+      </p>
+    </section>
+    <aside id="carouselExampleIndicators" class="carousel slide col-4" data-ride="carousel">
+        <ol class="carousel-indicators color-red">
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner rounded-4">
+          <div class="carousel-item active">
+            <img class="d-block w-100 rounded-4" src="assets\virginia1.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><span class="bg-secondary p-2 rounded-4">Shenandoah National Park</span></h5>
+              <p class = "m-3"><span class="bg-secondary p-1 rounded-4">Breathtaking views</span></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded-4" src="assets\virginia2.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><span class="bg-secondary p-2 rounded-4">Potomac River</span></h5>
+              <p class = "m-3"><span class="bg-secondary p-1 rounded-4">Scenic banks</span></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100 rounded-4" src="assets\virginia3.jpg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><span class="bg-secondary p-2 rounded-4">Harper's Ferry</span></h5>
+              <p class = "m-3"><span class="bg-secondary p-1 rounded-4">Historical town</span></p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+     
+    </aside>
+  </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>
