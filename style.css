@@ -1,0 +1,70 @@
+section {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  color: white;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 37, 37, 0.6);
+  z-index: -1;
+}
+
+#float {
+  float: right;
+  margin-top: 3%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  body {
+    background-image: url("assets/Rainy_Blue_Ridge-27527.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+.carousel-inner {
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.carousel-item {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  color: transparent;
+}
+.bg-secondary {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+a.nav-link:hover {
+  color: #ff0000;
+}
